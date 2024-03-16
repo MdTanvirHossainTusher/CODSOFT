@@ -1,6 +1,7 @@
 import pickle
 
 import pandas as pd
+
 from sklearn.preprocessing import StandardScaler
 
 import streamlit as st
@@ -35,7 +36,7 @@ def main():
     classes = {0: "Iris-setosa", 1: "Iris-virginica", 2: "Iris-virginica"}
     if st.button("Predict"):
         prediction = make_prediction(input_df)
-        st.write(f"Predicted class: {classes[prediction]}")
+        st.write(f"Predicted class: {classes[prediction[0]]}")
 
 
 if __name__ == "__main__":
